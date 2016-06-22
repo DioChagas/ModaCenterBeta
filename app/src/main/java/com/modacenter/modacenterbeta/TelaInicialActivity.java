@@ -49,8 +49,8 @@ public class TelaInicialActivity extends AppCompatActivity {
     public void onContact(View view) {
         View view2 = findViewById(R.id.img_contato);
         view2.setOnClickListener(new OnclickListener(this,ContatoActivity.class));
-        Intent intent = new Intent(this, TextActivity.class);
-        intent.putExtra(TextActivity.KEY_FILE_NAME, "contato.txt");
+        Intent intent = new Intent(this, ContatoActivity.class);
+        intent.putExtra(ContatoActivity.KEY_FILE_NAME, "contato.txt");
         startActivity(intent);
     }
 
