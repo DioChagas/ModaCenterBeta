@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.modacenter.modacenterbeta">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logoum"
+        android:label="Moda Center"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyTheme">
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TelaInicialActivity"
+            android:label="Home" />
+        <activity
+            android:name=".ServicosActivity"
+            android:label="Serviços"
+            android:parentActivityName=".TelaInicialActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TelaInicialActivity" />
+        </activity>
+
+        <activity
+            android:name=".ContatoActivity"
+            android:label="Contato"
+            android:parentActivityName=".TelaInicialActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".TelaInicialActivity" />
+        </activity>
+
+        <activity
+            android:name=".CalendarioActivity"
+            android:label="Datas das feiras"
+            android:parentActivityName=".TelaInicialActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TelaInicialActivity" />
+        </activity>
+
+        <activity
+            android:name=".InformesActivity"
+            android:label="Informes"
+            android:parentActivityName=".TelaInicialActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TelaInicialActivity" />
+        </activity>
+
+        <activity
+            android:name=".ParqueInfoActivity"
+            android:label="Sobre o parque"
+            android:parentActivityName=".TelaInicialActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TelaInicialActivity" />
+        </activity>
+
+        <activity
+            android:name=".GaleriaDeFotosActivity"
+            android:label="Galeria de fotos"
+            android:parentActivityName=".TelaInicialActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TelaInicialActivity" />
+        </activity>
+
+
+    </application>
+
+</manifest>

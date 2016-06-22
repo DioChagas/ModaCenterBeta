@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#00b7ff</item>
+        <item name="colorPrimaryDark">#006d9c</item>
+        <item name="colorAccent">#fc9105</item>
+    </style>
+
+    <style name="Theme.MyTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyButton" parent="Theme.AppCompat">
+        <item name="colorControlHighlight">#006d9b</item>
+        <item name="colorButtonNormal">#00b6fe</item>
+    </style>
+
+</resources>
