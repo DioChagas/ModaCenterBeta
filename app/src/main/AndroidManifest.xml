@@ -26,16 +26,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TelaInicialActivity" />
         </activity>
-
         <activity
             android:name=".ContatoActivity"
             android:label="Contato"
             android:parentActivityName=".TelaInicialActivity">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".TelaInicialActivity" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TelaInicialActivity" />
         </activity>
-
         <activity
             android:name=".CalendarioActivity"
             android:label="Datas das feiras"
@@ -44,7 +42,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TelaInicialActivity" />
         </activity>
-
         <activity
             android:name=".InformesActivity"
             android:label="Informes"
@@ -53,7 +50,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TelaInicialActivity" />
         </activity>
-
         <activity
             android:name=".ParqueInfoActivity"
             android:label="Sobre o parque"
@@ -62,7 +58,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TelaInicialActivity" />
         </activity>
-
         <activity
             android:name=".GaleriaDeFotosActivity"
             android:label="Galeria de fotos"
@@ -71,8 +66,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TelaInicialActivity" />
         </activity>
-
-
+        <activity android:name=".TextActivity"></activity>
     </application>
 
 </manifest>

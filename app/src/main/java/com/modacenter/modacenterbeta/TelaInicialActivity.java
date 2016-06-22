@@ -28,13 +28,13 @@ public class TelaInicialActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         View view1 = findViewById(R.id.img_servico);
-        View view2 = findViewById(R.id.img_contato);
+       // View view2 = findViewById(R.id.img_contato);
         View view3 = findViewById(R.id.img_calendario);
         View view4 = findViewById(R.id.img_informes);
         View view5 = findViewById(R.id.img_parque);
 
         view1.setOnClickListener(new OnclickListener(this, ServicosActivity.class));
-        view2.setOnClickListener(new OnclickListener(this, ContatoActivity.class));
+        // view2.setOnClickListener(new OnclickListener(this, ContatoActivity.class));
         view3.setOnClickListener(new OnclickListener(this, CalendarioActivity.class));
         view4.setOnClickListener(new OnclickListener(this, InformesActivity.class));
         view5.setOnClickListener(new OnclickListener(this, ParqueInfoActivity.class));
@@ -44,6 +44,14 @@ public class TelaInicialActivity extends AppCompatActivity {
         onNavegationDrawer();
 
 
+    }
+
+    public void onContact(View view) {
+        View view2 = findViewById(R.id.img_contato);
+        view2.setOnClickListener(new OnclickListener(this,ContatoActivity.class));
+        Intent intent = new Intent(this, TextActivity.class);
+        intent.putExtra(TextActivity.KEY_FILE_NAME, "contato.txt");
+        startActivity(intent);
     }
 
     private class OnclickListener implements View.OnClickListener{
@@ -62,8 +70,6 @@ public class TelaInicialActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
-
 
     private void onNavegationDrawer() {
         Drawer drawer = new DrawerBuilder()

@@ -34,6 +34,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/servico"
+            android:onClick=""
             android:layout_margin="20dp"
 
             />
@@ -43,6 +44,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/contato"
+            android:onClick="onContact"
             android:layout_margin="20dp"/>
 
     </LinearLayout>
