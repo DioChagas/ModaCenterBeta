@@ -19,7 +19,6 @@ public class CalendarioActivity extends AppCompatActivity {
         ImageView imageView = (ImageView) findViewById(R.id.calendar);
 
 
-
         Toolbar calendario = (Toolbar) findViewById(R.id.tbcalendario);
         setSupportActionBar(calendario);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
