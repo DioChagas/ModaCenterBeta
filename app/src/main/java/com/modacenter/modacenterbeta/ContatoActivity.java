@@ -32,9 +32,10 @@ public class ContatoActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         BufferedReader br = null;
+
         try {
             String fileName = getIntent().getStringExtra(KEY_FILE_NAME);
-            br = new BufferedReader(new InputStreamReader(getAssets().open(fileName)));
+            br = new BufferedReader(new InputStreamReader(getAssets().open(fileName),"ISO-8859-1"));
             String line;
             StringBuffer sb = new StringBuffer();
             while ((line = br.readLine()) != null) {

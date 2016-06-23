@@ -40,12 +40,13 @@
             />
 
         <ImageView
-            android:id="@+id/img_contato"
+            android:id="@+id/img_calendario"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/contato"
-            android:onClick="onContact"
+            android:src="@drawable/calendario"
             android:layout_margin="20dp"/>
+
+
 
     </LinearLayout>
 
@@ -55,21 +56,24 @@
         android:id="@+id/linear02"
         android:gravity="center"
         android:orientation="horizontal"
-        android:layout_margin="20dp">
+        android:layout_margin="10dp">
 
-        <ImageView
-            android:id="@+id/img_calendario"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/calendario"
-            android:layout_margin="20dp"/>
+            <ImageView
+                android:id="@+id/img_parque"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/parq"
+                android:onClick="onAboutPark"
+                />
 
-        <ImageView
-            android:id="@+id/img_informes"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/informes"
-            android:layout_margin="20dp"/>
+
+            <ImageView
+                android:id="@+id/img_informes"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/informes"
+                android:layout_margin="20dp"
+                />
     </LinearLayout>
 
     <LinearLayout
@@ -80,10 +84,12 @@
         android:orientation="vertical"
         android:layout_margin="20dp">
         <ImageView
-            android:id="@+id/img_parque"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/parq"/>
+            android:id="@+id/img_contato"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/contato"
+            android:onClick="onContact"
+            />
 
     </LinearLayout>
 

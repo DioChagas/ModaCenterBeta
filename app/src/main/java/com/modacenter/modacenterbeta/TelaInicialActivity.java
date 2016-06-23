@@ -31,13 +31,13 @@ public class TelaInicialActivity extends AppCompatActivity {
        // View view2 = findViewById(R.id.img_contato);
         View view3 = findViewById(R.id.img_calendario);
         View view4 = findViewById(R.id.img_informes);
-        View view5 = findViewById(R.id.img_parque);
+       // View view5 = findViewById(R.id.img_parque);
 
         view1.setOnClickListener(new OnclickListener(this, ServicosActivity.class));
         // view2.setOnClickListener(new OnclickListener(this, ContatoActivity.class));
         view3.setOnClickListener(new OnclickListener(this, CalendarioActivity.class));
         view4.setOnClickListener(new OnclickListener(this, InformesActivity.class));
-        view5.setOnClickListener(new OnclickListener(this, ParqueInfoActivity.class));
+       // view5.setOnClickListener(new OnclickListener(this, ParqueInfoActivity.class));
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -51,6 +51,14 @@ public class TelaInicialActivity extends AppCompatActivity {
         view2.setOnClickListener(new OnclickListener(this,ContatoActivity.class));
         Intent intent = new Intent(this, ContatoActivity.class);
         intent.putExtra(ContatoActivity.KEY_FILE_NAME, "contato.txt");
+        startActivity(intent);
+    }
+
+    public void onAboutPark(View view) {
+        View view5 = findViewById(R.id.img_parque);
+        view5.setOnClickListener(new OnclickListener(this,ContatoActivity.class));
+        Intent intent = new Intent(this, ParqueInfoActivity.class);
+        intent.putExtra(ParqueInfoActivity.KEY_FILE_NAME, "sobreParque.txt");
         startActivity(intent);
     }
 
