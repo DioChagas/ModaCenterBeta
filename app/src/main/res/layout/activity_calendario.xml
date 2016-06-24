@@ -2,73 +2,69 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.modacenter.modacenterbeta.CalendarioActivity">
-
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/tbcalendario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:headerLayout="@drawable/logodefault"
-        />
+    android:orientation="vertical"
+    tools:context="com.modacenter.modacenterbeta.CalendarioActivity"
+    android:parentActivityName="com.modacenter.modacenterbeta.TelaInicialActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
-        android:layout_margin="20dp">
+        android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/img_but"
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tbcalendario"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/calendar"
-            android:scaleType="centerCrop"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:headerLayout="@drawable/logodefault"
             />
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/calendar_2"
+            android:layout_margin="10dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/expand_img"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="invisible"
-                android:src="@drawable/calendar"
-                />
-<!--
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:gravity="center">
             <TextView
                 android:id="@+id/Tvcliqueaqui"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="Clique aqui "
+                android:text="@string/clickView"
+                android:textColor="@color/md_blue_900"
                 android:textStyle="bold"
-                android:onClick="https://farm6.staticflickr.com/5804/23943469071_45a4ab67e7_o_d.jpg"
-                android:textColor="@color/md_blue_900"/>
+                android:autoLink="web"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
             <TextView
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textColor="@color/md_deep_orange_700"
-                android:text="para baixar a imagem em tamanho maior"/> -->
+                android:text=" para ver a imagem em tamanho grande"
+                android:textColor="@color/md_blue_900"
+            />
+
         </LinearLayout>
-
     </LinearLayout>
-
 
 
 

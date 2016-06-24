@@ -86,9 +86,13 @@ public class TelaInicialActivity extends AppCompatActivity {
                 .withHeader(R.layout.nav_header_abertura)
                 .withActionBarDrawerToggleAnimated(true).withDrawerGravity(Gravity.LEFT)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withIcon(R.drawable.ic_menu_gallery).withName("Galeria"))
+                        new PrimaryDrawerItem().withIcon(R.drawable.ic_photo_library_black_25dp).withName("Galeria"))
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withIcon(R.drawable.ic_perm_device_information_black_25dp).withName("Desenvolvimento"))
+                        new PrimaryDrawerItem().withIcon(R.drawable.mc_blog_ns).withName("Blog"))
+                .addDrawerItems(
+                        new PrimaryDrawerItem().withIcon(R.drawable.mc_blog_ns).withName("Redes Sociais"))
+                .addDrawerItems(
+                        new PrimaryDrawerItem().withIcon(R.drawable.ic_perm_device).withName("Desenvolvimento"))
                 .withOnDrawerItemClickListener(
                         new Drawer.OnDrawerItemClickListener() {
                             @Override

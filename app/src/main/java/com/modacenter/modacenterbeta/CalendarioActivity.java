@@ -1,27 +1,23 @@
 package com.modacenter.modacenterbeta;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
-import android.graphics.Point;
-import android.graphics.Rect;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.style.URLSpan;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.DecelerateInterpolator;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import classes.URLSpanNoUnderline;
 
 public class CalendarioActivity extends AppCompatActivity {
 
-    private Animator mCurrentAnimator;
-    private int mShortAnimationDuration;
+    // private Animator mCurrentAnimator;
+    // private int mShortAnimationDuration;
 
 
     @Override
@@ -29,8 +25,22 @@ public class CalendarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendario);
 
-        final View imgBut = findViewById(R.id.img_but);
-        imgBut.setOnClickListener(new View.OnClickListener() {
+        // final View imgBut = findViewById(R.id.img_but);
+
+        TextView textView = (TextView) findViewById(R.id.Tvcliqueaqui);
+        textView.setAutoLinkMask(0);
+        textView.setText(
+                Html.fromHtml(
+                        "<a href=\"https://farm6.staticflickr.com/5804/23943469071_45a4ab67e7_o_d.jpg\">Clique aqui</a> "));
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+
+
+        Toolbar calendario = (Toolbar) findViewById(R.id.tbcalendario);
+        setSupportActionBar(calendario);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+/*        imgBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 zoomImageFromThumb(imgBut,R.drawable.calendar);
@@ -39,18 +49,24 @@ public class CalendarioActivity extends AppCompatActivity {
 
         mShortAnimationDuration = getResources().getInteger(
                 android.R.integer.config_shortAnimTime);
+*/
 
-
-        //TextView textView = (TextView) findViewById(R.id.Tvcliqueaqui);
-
-
-        Toolbar calendario = (Toolbar) findViewById(R.id.tbcalendario);
-        setSupportActionBar(calendario);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
+        stripUnderlines(textView);
     }
 
+    private void stripUnderlines(TextView textView) {
+        Spannable s = new SpannableString(textView.getText());
+        URLSpan[] spans = s.getSpans(0, s.length(), URLSpan.class);
+        for (URLSpan span: spans) {
+            int start = s.getSpanStart(span);
+            int end = s.getSpanEnd(span);
+            s.removeSpan(span);
+            span = new URLSpanNoUnderline(span.getURL());
+            s.setSpan(span, start, end, 0);
+        }
+        textView.setText(s);
+    }
+/*
     private void zoomImageFromThumb(final View imgBut, int imageResId) {
         if (mCurrentAnimator != null) {
             mCurrentAnimator.cancel();
@@ -58,6 +74,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
         final ImageView expandedImageView = (ImageView) findViewById(
                 R.id.expand_img);
+
         expandedImageView.setImageResource(imageResId);
 
         final Rect startBounds = new Rect();
@@ -168,7 +185,7 @@ public class CalendarioActivity extends AppCompatActivity {
         });
 
 
-    }
+    } */
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

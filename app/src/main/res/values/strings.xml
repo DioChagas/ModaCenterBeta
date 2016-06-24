@@ -1,3 +1,5 @@
 <resources>
+    <string name="clickView">
+        <a href="http://modacenterscc.blogspot.com.br/p/guias.html">Clique aqui </a></string>
     <string name="app_name">ModaCenterBeta</string>
 </resources>
