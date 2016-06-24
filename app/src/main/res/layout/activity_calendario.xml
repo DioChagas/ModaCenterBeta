@@ -50,11 +50,9 @@
                 android:id="@+id/Tvcliqueaqui"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/clickView"
+                android:text="Clique aqui"
                 android:textColor="@color/md_blue_900"
                 android:textStyle="bold"
-                android:autoLink="web"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 />
             <TextView
                 android:layout_width="wrap_content"
