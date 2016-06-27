@@ -2,6 +2,7 @@ package com.modacenter.modacenterbeta;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,19 +45,18 @@ public class CalendarioActivity extends AppCompatActivity {
                 AlertDialog.Builder alerta = new AlertDialog.Builder(CalendarioActivity.this);
 
                 alerta
+                        .setTitle("AVISO")
                         .setIcon(R.drawable.mc_blog_ns)
-                        .setTitle("Aviso")
                         .setCancelable(false)
                         .setMessage("Deseja fazer download do calendário?")
                         .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        textView.setText(
-                                Html.fromHtml(
-                                        "<a href=\"http://www.modacentersantacruz.com.br/calendario.pdf\">Clique aqui</a>"));
-                        textView.setMovementMethod(LinkMovementMethod.getInstance());
-                        Toast.makeText(CalendarioActivity.this,"Download a caminho!", Toast.LENGTH_SHORT).show();
+                        Uri uri = Uri.parse("http://www.modacentersantacruz.com.br/calendario.pdf");
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                        Toast.makeText(CalendarioActivity.this,"Redirecionando...", Toast.LENGTH_SHORT).show();
 
                     }
                 });
@@ -72,6 +72,7 @@ public class CalendarioActivity extends AppCompatActivity {
                 alerta.show();
             }
         });
+
 
         stripUnderlines(textView);
 

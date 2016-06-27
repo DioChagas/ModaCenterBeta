@@ -69,6 +69,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TelaInicialActivity" />
         </activity>
+        <activity android:name=".RedesSociaisActivity"></activity>
     </application>
 
 </manifest>

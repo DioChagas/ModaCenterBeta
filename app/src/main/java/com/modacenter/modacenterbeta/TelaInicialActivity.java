@@ -1,13 +1,17 @@
 package com.modacenter.modacenterbeta;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -113,25 +117,52 @@ public class TelaInicialActivity extends AppCompatActivity {
                 intent = new Intent(this,GaleriaDeFotosActivity.class);
                 startActivity(intent);
                 break;
-            /*case 1:
-                intent = new Intent(this, RedefinirSenhaActivity.class);
-                startActivity(intent);
-                break;
             case 2:
-                intent = new Intent(this, AjudaActivity.class);
-                startActivity(intent);
+                AlertDialog.Builder alerta = new AlertDialog.Builder(TelaInicialActivity.this);
+
+                alerta
+                        .setTitle("AVISO")
+                        .setIcon(R.drawable.mc_blog_ns)
+                        .setCancelable(true)
+                        .setMessage("Deseja ser redirecionado para o Blog Moda Center?")
+                        .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Uri uri = Uri.parse("http://modacenterscc.blogspot.com.br");
+                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                startActivity(intent);
+                                Toast.makeText(TelaInicialActivity.this,"Redirecionando...", Toast.LENGTH_SHORT).show();
+
+                            }
+                        });
+
+                alerta.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(TelaInicialActivity.this,TelaInicialActivity.class);
+                        startActivity(intent);
+                    }
+                });
+                AlertDialog alertDialog = alerta.create();
+                alerta.show();
                 break;
             case 3:
+                intent = new Intent(this, RedesSociaisActivity.class);
+                startActivity(intent);
+                break;
+            /* case 4:
 
                 intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 finish();
                 break;
-            case 4:
+            case 5:
                 intent = new Intent(this, ChatActivity.class);
                 startActivity(intent);
                 break;
         }*/
+
 
         }
 
