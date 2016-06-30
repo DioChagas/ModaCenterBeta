@@ -3,13 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:parentActivityName="com.modacenter.modacenterbeta.TelaInicialActivity"
     tools:context="com.modacenter.modacenterbeta.InformesActivity">
 
-    <ExpandableListView
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tbinformes"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/expandableListView"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:headerLayout="@drawable/logodefault"
+        />
 
-        android:layout_weight="1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="30dp">
+
+        <ImageView
+            android:id="@+id/no_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:src="@drawable/message_info"/>
+    </LinearLayout>
 </LinearLayout>

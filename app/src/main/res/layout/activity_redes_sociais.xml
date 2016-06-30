@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:parentActivityName="com.modacenter.modacenterbeta.TelaInicialActivity"
     tools:context="com.modacenter.modacenterbeta.RedesSociaisActivity"
@@ -31,19 +32,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:gravity="center"
             >
 
-            <ImageView
+            <classes.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/tweet11"
-                android:layout_margin="20dp"/>
+                android:text="Siga-nos nas redes sociais!"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textColor="@color/md_deep_orange_700"
+                customfontdemo:minhaFonte="gothicb.ttf"
+                android:layout_marginBottom="30dp"
+                />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/fb1"
-                android:layout_margin="30dp"/>
+                android:src="@drawable/tw0"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fb0"
+                />
         </LinearLayout>
 
 
@@ -53,18 +66,7 @@
             android:orientation="vertical"
             android:gravity="">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@Moda_Center"
-                android:textSize="20sp"
-                android:layout_margin="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/ModaCenterSantaCruz"
-                android:textSize="20sp"
-                />
+
 
 
         </LinearLayout>

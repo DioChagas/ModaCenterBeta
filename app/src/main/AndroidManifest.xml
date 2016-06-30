@@ -69,7 +69,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TelaInicialActivity" />
         </activity>
-        <activity android:name=".RedesSociaisActivity"></activity>
+
+        <activity
+            android:name=".RedesSociaisActivity"
+            android:label="Redes sociais"
+            android:parentActivityName=".TelaInicialActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TelaInicialActivity" />
+        </activity>
     </application>
 
 </manifest>
