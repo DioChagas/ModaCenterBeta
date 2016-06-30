@@ -32,9 +32,6 @@ dependencies {
     compile 'com.github.bluejamesbond:textjustify-android:2.1.6'
     compile 'me.biubiubiu.justifytext:library:1.1'
     compile 'com.facebook.android:facebook-android-sdk:4.+'
-    compile('com.mopub:mopub-sdk:4.3.0@aar') {
-        transitive = true
-    }
     compile('com.mikepenz:materialdrawer:5.2.1@aar') {
         transitive = true
     }

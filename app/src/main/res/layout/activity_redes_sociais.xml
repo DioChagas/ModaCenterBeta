@@ -36,6 +36,7 @@
             >
 
             <classes.MyTextView
+                android:id="@+id/myTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Siga-nos nas redes sociais!"
@@ -47,12 +48,14 @@
                 />
 
             <ImageView
+                android:id="@+id/tw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/tw0"
                 />
 
             <ImageView
+                android:id="@+id/fb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/fb0"
