@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:parentActivityName="com.modacenter.modacenterbeta.TelaInicialActivity"
     tools:context="com.modacenter.modacenterbeta.GaleriaDeFotosActivity"
@@ -20,10 +21,32 @@
         app:headerLayout="@drawable/logodefault"
         />
 
-    <ViewFlipper
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/viewFlipper" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <classes.MyTextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Algumas fotos do Moda Center Santa Cruz"
+            android:textColor="@color/md_light_green_900"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
+            customfontdemo:minhaFonte="gothic.ttf"/>
+
+        <ViewFlipper
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewFlipper" />
+    </LinearLayout>
 
 
 </LinearLayout>

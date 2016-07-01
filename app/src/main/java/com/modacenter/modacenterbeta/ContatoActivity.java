@@ -4,6 +4,7 @@ package com.modacenter.modacenterbeta;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.TextView;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -55,6 +56,16 @@ public class ContatoActivity extends AppCompatActivity {
         mJustifiedText.setText(text);
         mJustifiedScroller = (MyScrollView)findViewById(R.id.justified_scroller);
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
