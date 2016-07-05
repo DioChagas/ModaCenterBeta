@@ -151,19 +151,10 @@ public class TelaInicialActivity extends AppCompatActivity {
                 intent = new Intent(this, RedesSociaisActivity.class);
                 startActivity(intent);
                 break;
-            /* case 4:
-
-                intent = new Intent(this, LoginActivity.class);
-                startActivity(intent);
-                finish();
-                break;
-            case 5:
-                intent = new Intent(this, ChatActivity.class);
+             case 4:
+                intent = new Intent(this, DesenvolvimentoActivity.class);
                 startActivity(intent);
                 break;
-        }*/
-
-
         }
 
     }
@@ -178,8 +169,5 @@ public class TelaInicialActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
-
 
 }

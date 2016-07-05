@@ -46,35 +46,30 @@
                 customfontdemo:minhaFonte="gothicb.ttf"
                 android:layout_marginBottom="30dp"
                 />
-
-            <ImageView
-                android:id="@+id/tw"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/tw0"
-                />
-
-            <ImageView
-                android:id="@+id/fb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/fb0"
-                />
         </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="">
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/tw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tw1"
+            android:layout_marginRight="25dp"
+            />
 
-
-
-        </LinearLayout>
-
-
+        <ImageView
+            android:id="@+id/fb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fb0"
+            />
     </LinearLayout>
 
 </LinearLayout>
